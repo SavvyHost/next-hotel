@@ -2,10 +2,11 @@
 import { Checkbox } from "@mantine/core";
 
 type CheckboxComp_TP = {
-  label: string;
-};
+  label: string
+  className?:string
+}
 
-function CheckboxComp({ label }: CheckboxComp_TP) {
-  return <Checkbox label={label} />;
+function CheckboxComp({ label, className }: CheckboxComp_TP) {
+  return <Checkbox label={label} className={className} />
 }
 export default CheckboxComp;
