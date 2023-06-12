@@ -1,12 +1,10 @@
 "use client";
 
-import React from "react";
-import Button from "../atoms/Button";
-import SearchForm from "../atoms/SearchForm";
-import DateInputComp from "../atoms/DateInput";
-import { t } from "i18next";
-import DropDown from "../atoms/DropDown";
 import { useForm } from "@mantine/form";
+import Button from "../atoms/Button";
+import DateInputComp from "../atoms/DateInput";
+import DropDown from "../atoms/DropDown";
+import SelectForm from "../atoms/SelectForm";
 
 function HeroSection() {
   const form = useForm({
@@ -21,7 +19,7 @@ function HeroSection() {
   });
 
   return (
-    <div className="container m-auto p-20">
+    <div className="container p-20 m-auto">
       <div className="grid grid-cols-2 px-5">
         <div className="col-span-1">
           <h1 className="text-3xl font-bold">
@@ -42,7 +40,7 @@ function HeroSection() {
           <form onSubmit={form.onSubmit((values) => console.log(values))}>
             <div className="w-[60%] ml-auto ">
               <div className="p-3 shadow-2xl rounded-xl">
-                <SearchForm />
+                <SelectForm />
                 <div className="grid grid-cols-2 mt-4">
                   <div className="col-span-2">
                     <DateInputComp placeholder="Check-in - Check-out " />
