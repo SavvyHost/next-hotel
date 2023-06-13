@@ -22,6 +22,7 @@ interface CardSearchProps {
   category?: string
   title?: string
   date?: string
+  location?:string
   author?: {
     name?: string
     avatar?: string
@@ -32,6 +33,7 @@ export function CardSearch({
   image,
   category,
   title,
+  location,
   date,
   author,
 }: CardSearchProps) {
@@ -41,8 +43,11 @@ export function CardSearch({
       <Group noWrap spacing={0}>
         <Image src={image} alt="img" height={250} width={250} />
         <div className={classes.body}>
-          <Text transform="uppercase" color="dimmed" weight={700} size="xs">
+          <Text transform="uppercase" color="#3f54f1" weight={700} size="xl">
             {category}
+          </Text>
+          <Text transform="uppercase" color="dimmed" weight={200} size="xl">
+            {location}
           </Text>
           <Text className={classes.title} mt="xs" mb="md">
             {title}
@@ -53,7 +58,21 @@ export function CardSearch({
               <Text size="xs">{author?.name}</Text>
             </Group>
             <Text size="xs" color="dimmed">
-              •
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-check"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#2c3e50"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l5 5l10 -10" />
+              </svg>
             </Text>
             <Text size="xs" color="dimmed">
               {date}

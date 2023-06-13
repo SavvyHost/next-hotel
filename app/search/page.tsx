@@ -178,7 +178,8 @@ export default function page() {
             author={"aaaaa"}
             title="New York Marriott Marquis"
             date="12/8/2005"
-            category=""
+            category="New York Marriott Marquis"
+            location="New York Marriott Marquis"
           />
         </div>
       </div>
