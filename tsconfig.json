@@ -1,10 +1,21 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/",
+    // "noImplicitAny": true,
+
+
+    "noEmitOnError": false,
+    "noImplicitAny": false,
+    "strict": false,
+
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    // "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

@@ -10,7 +10,7 @@ const bottonVars = tv({
   compoundVariants: [
     {
       color: "primary",
-      disabled: true,
+      // disabled: true,
       className: "text-white bg_banfsgy",
     },
 

@@ -1,13 +1,7 @@
 "use client";
-
 import { useState } from "react";
-import { Quantitiy } from "./Quantitiy";
-import {
-  IconGitBranchDeleted,
-  IconHttpDelete,
-  IconSquareRoundedLetterP,
-} from "@tabler/icons-react";
 import Button from "./Button";
+import { Quantitiy } from "./Quantitiy";
 
 function DropDown() {
   const [open, setOpen] = useState(false);
