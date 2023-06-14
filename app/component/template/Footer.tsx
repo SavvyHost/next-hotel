@@ -109,7 +109,7 @@ function Footer() {
                     placeholder="E-mail address"
                     className="w-2/3 px-2 py-2 bg-transparent border border-r-0 rounded-r-none rounded-l-g"
                   />
-                  <button className="px-2 py-2 border  rounded-lg rounded-l-none bg-bg_banfsgy ">
+                  <button className="px-2 py-2 border rounded-lg rounded-l-none bg-bg_banfsgy ">
                     Sign Up
                   </button>
                 </div>
@@ -118,7 +118,7 @@ function Footer() {
 
             <li className="grid items-center grid-cols-5">
               <div className="col-span-1">
-              <Image className="w-2/3" src={img2.src} alt="img" />
+              <Image className="w-2/3" src={img2.src} alt="img"  width="10" height="10"/>
                 
               </div>
 
@@ -137,7 +137,7 @@ function Footer() {
 
               <div className="col-span-1">
                 {/* <img " /> */}
-                <Image src={img.src} alt="img" />
+                <Image src={img.src} alt="img" width="10" height="10" />
               </div>
             </li>
           </ul>

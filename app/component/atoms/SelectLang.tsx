@@ -1,4 +1,4 @@
-"use "
+"use client"
 import { useState } from "react";
 import { createStyles, UnstyledButton, Menu, Image, Group, rem } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";

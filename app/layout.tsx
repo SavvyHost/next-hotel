@@ -20,7 +20,8 @@ export default function RootLayout({
   return (
     <html>
       <MantineProvider>
-        <body className={inter.className}>
+        
+        <body className={inter.className} >
           <Navbar />
           {children}
         </body>
