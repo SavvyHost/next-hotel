@@ -37,10 +37,11 @@ export default function page() {
         </div>
         <div className="col-span-1 p-3">
           <Button
-            children="Update Search"
             variant="primary"
             className="p-1 px-4 w-[100%] "
-          />
+          >
+            Update Search
+            </Button>
         </div>
       </div>
 

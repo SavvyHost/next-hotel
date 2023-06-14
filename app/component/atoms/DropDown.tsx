@@ -1,16 +1,11 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { Quantitiy } from "./Quantitiy";
-import {
-  IconGitBranchDeleted,
-  IconHttpDelete,
-  IconSquareRoundedLetterP,
-} from "@tabler/icons-react";
-import Button from "./Button";
+import { useState } from "react"
+import Button from "./Button"
+import { Quantitiy } from "./Quantitiy"
 
 function DropDown() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
   return (
     <>
       <div className="relative inline-block text-left w-[100%] ">
@@ -54,7 +49,6 @@ function DropDown() {
                 </div>
               </div>
               <div>
-                
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0,0,256,256"
@@ -82,22 +76,18 @@ function DropDown() {
                     </g>
                   </g>
                 </svg>
-                
               </div>
-              
             </div>
             <div>
-            <Button
-            children="Add Room "
-            variant="primary"
-            className="p-1 px-4 w-[40%] mt-5"
-          />
+              <Button variant="primary" className="p-1 px-4 w-[40%] mt-5">
+                Add Room
+              </Button>
             </div>
           </div>
         )}
       </div>
     </>
-  );
+  )
 }
 
-export default DropDown;
+export default DropDown

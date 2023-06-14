@@ -10,7 +10,7 @@ function DateInputComp({ placeholder }: any) {
     <div>
       <DatePickerInput
         type="range"
-        // label="Pick dates range"
+        label="Pick dates range"
         placeholder={placeholder}
         value={value}
         onChange={setValue}

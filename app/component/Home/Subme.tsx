@@ -17,7 +17,9 @@ function Subme() {
           with no hidden fees.
         </p>
 
-        <Button children="Sign Up" className="px-10 py-2 mt-5 text-black bg-white" />
+        <Button  className="px-10 py-2 mt-5 text-black bg-white" >
+          Sign Up
+        </Button>
       </div>
     </div>
   );

@@ -6,11 +6,11 @@ import {
   createStyles,
   getStylesRef,
   rem,
-} from "@mantine/core";
-import { IconCheck, IconLocation, IconStar } from "@tabler/icons-react";
-import Button from "../atoms/Button";
+} from "@mantine/core"
+import { IconCheck, IconLocation, IconStar } from "@tabler/icons-react"
+import Button from "../atoms/Button"
 
-import { Carousel } from "@mantine/carousel";
+import { Carousel } from "@mantine/carousel"
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -52,34 +52,33 @@ const useStyles = createStyles((theme) => ({
   body: {
     padding: theme.spacing.md,
   },
-}));
+}))
 
 interface CardSearchProps {
-  image: string[];
-  category?: string;
-  title?: string;
-  date?: string;
+  image: string[]
+  category?: string
+  title?: string
+  date?: string
   author?: {
-    name?: string;
-    avatar?: string;
-  };
+    name?: string
+    avatar?: string
+  }
 }
 
 export function CardSearch({
   image,
   category,
   title,
-  location,
   date,
   author,
 }: CardSearchProps) {
-  const { classes } = useStyles();
+  const { classes } = useStyles()
 
   const slides = image.map((image) => (
     <Carousel.Slide key={image}>
-      <Image src={image} height={280} />
+      <Image src={image} alt="img" height={280} />
     </Carousel.Slide>
-  ));
+  ))
 
   return (
     <Card
@@ -125,7 +124,13 @@ export function CardSearch({
                   </p>
                 </div>
               </Group>
-              <Text transform="uppercase" color="black" weight={700} size="xl" className=" cursor-pointer hover:text-[#5d22d5] ">
+              <Text
+                transform="uppercase"
+                color="black"
+                weight={700}
+                size="xl"
+                className=" cursor-pointer hover:text-[#5d22d5] "
+              >
                 {category}
               </Text>
               <Text
@@ -181,19 +186,18 @@ export function CardSearch({
               </div>
 
               <div>
-              {/* تعمل الخصم  */}
-                <p>50$</p> 
+                {/* تعمل الخصم  */}
+                <p>50$</p>
                 <h1 className="text-[#5d22d5] font-bold text-2xl">30$</h1>
                 <p className="text-gray-500">price per night</p>
-                <Button
-                  children="Choose your room "
-                  className="p-2 rounded-full bg-[#05ac05]"
-                />
+                <Button className="p-2 rounded-full bg-[#05ac05]">
+                  Choose your room
+                </Button>
               </div>
             </div>
           </div>
         </div>
       </Group>
     </Card>
-  );
+  )
 }
