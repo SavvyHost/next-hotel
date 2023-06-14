@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { useForm } from "@mantine/form";
-import Button from "../atoms/Button";
-import DateInputComp from "../atoms/DateInput";
-import DropDown from "../atoms/DropDown";
-import SelectForm from "../atoms/SelectForm";
+import { useForm } from "@mantine/form"
+import Button from "../atoms/Button"
+import DateInputComp from "../atoms/DateInput"
+import DropDown from "../atoms/DropDown"
+import SelectForm from "../atoms/SelectForm"
 
 function HeroSection() {
   const form = useForm({
@@ -16,7 +16,7 @@ function HeroSection() {
     validate: {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
     },
-  });
+  })
 
   return (
     <div className="container p-20 m-auto">
@@ -30,14 +30,20 @@ function HeroSection() {
             1,900,000 hotels, car rental, and other services throughout the
             world
           </p>
-          <Button
-            children="sign up"
-            variant="primary"
-            className="p-2 px-4 w-[40%] mt-5"
-          />
+          <Button variant="primary" className="p-2 px-4 w-[40%] mt-5">
+            sign up
+          </Button>
         </div>
         <div className="col-span-1 ">
-          <form onSubmit={form.onSubmit((values) => console.log(values))}>
+          <form onSubmit={
+            form.onSubmit(
+              (values) =>
+              {
+                
+                //console.log(values)
+                }
+            )
+          }>
             <div className="w-[60%] ml-auto ">
               <div className="p-3 shadow-2xl rounded-xl">
                 <SelectForm />
@@ -50,17 +56,19 @@ function HeroSection() {
                   <DropDown />
                 </div>
                 <Button
-                  children="Explore Hotels"
                   variant="primary"
                   className="p-2 px-4 w-[100%] mt-5"
-                />
+                >
+                  Explore Hotels
+
+                  </Button>
               </div>
-            </div>
+              </div>
           </form>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default HeroSection;
+export default HeroSection

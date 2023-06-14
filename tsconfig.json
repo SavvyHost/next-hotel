@@ -15,7 +15,11 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+<<<<<<< HEAD
     // "strict": true,
+=======
+    "strict": false,
+>>>>>>> abdo
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,

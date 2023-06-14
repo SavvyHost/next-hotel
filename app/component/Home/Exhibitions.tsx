@@ -4,7 +4,6 @@ import React from "react";
 import { Carousel } from "@mantine/carousel";
 import { BadgeCard  } from "../mucles/Card";
 import eventImage from "../../../public/assets/event-banner1.jpg";
-console.log("🚀 ~ file: Exhibitions.tsx:7 ~ eventImage:", eventImage);
 
 function Exhibitions() {
   return (

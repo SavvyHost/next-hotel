@@ -3,6 +3,7 @@ import Logo from "../atoms/Logo";
 import img from "../../../public/assets/footer-payments.png";
 import img2 from "../../../public/assets/footer-sectigo.png";
 import LogoWhite from "../atoms/LogoWhite";
+import Image from "next/image";
 
 
 function Footer() {
@@ -117,7 +118,8 @@ function Footer() {
 
             <li className="grid items-center grid-cols-5">
               <div className="col-span-1">
-                <img className="w-2/3" src={img2.src} />
+              <Image className="w-2/3" src={img2.src} alt="img" />
+                
               </div>
 
               <div className="col-span-3">
@@ -134,7 +136,8 @@ function Footer() {
               </div>
 
               <div className="col-span-1">
-                <img src={img.src} />
+                {/* <img " /> */}
+                <Image src={img.src} alt="img" />
               </div>
             </li>
           </ul>

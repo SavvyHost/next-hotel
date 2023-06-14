@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { tv, type VariantProps } from "tailwind-variants";
+import React, { ReactNode } from "react"
+import { tv, type VariantProps } from "tailwind-variants"
 
 const bottonVars = tv({
   variants: {
@@ -13,53 +13,52 @@ const bottonVars = tv({
       // disabled: true,
       className: "text-white bg_banfsgy",
     },
-
   ],
   defaultVariants: {
     color: "primary",
   },
-});
+})
 
-type ButtonVariants_TP = VariantProps<typeof bottonVars>;
+type ButtonVariants_TP = VariantProps<typeof bottonVars>
 
 interface ButtonProps_TP extends ButtonVariants_TP {
-  children: ReactNode;
-  className?: string;
-  disabled?: boolean;
-  action?: () => void;
-  variant?: "primary" ;
-  loading?: boolean;
-  type?: "button" | "submit" | "reset";
-  bordered?: boolean;
+  children: ReactNode
+  className?: string
+  disabled?: boolean
+  action?: () => void
+  variant?: "primary"
+  loading?: boolean
+  type?: "button" | "submit" | "reset"
+  bordered?: boolean
 }
 function Button({
-    variant,
-    children,
-    className,
-    disabled,
-    action,
-    loading,
-    type = "button",
-    bordered = false,
-    ...props
-}:ButtonProps_TP) {
+  variant,
+  children,
+  className,
+  disabled,
+  action,
+  loading,
+  type = "button",
+  bordered = false,
+  ...props
+}: ButtonProps_TP) {
+  var newClass = className
+  return (
+ 
+      <button
+        type={type}
+        disabled={disabled || loading}
+        className={bottonVars({
+          color: variant,
+          className: newClass,
+        })}
+        onClick={action}
+        {...props}
+      >
+        {children}
+      </button>
 
-    var newClass =  className
-  return <div>
-        <button
-      type={type}
-      disabled={disabled || loading}
-      className={bottonVars({
-        color: variant,
-        className: newClass,
-      })}
-      onClick={action}
-      {...props}
-    >
-
-      {children}
-    </button>
-  </div>;
+  )
 }
 
-export default Button;
+export default Button

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import {
   Box,
@@ -252,7 +253,12 @@ export function Navbar() {
 
                 <form
                   className="mt-5"
-                  onSubmit={form.onSubmit((values: any) => console.log(values))}
+                  onSubmit={form.onSubmit((values: any) =>
+                  {
+                    
+                    //console.log(values)
+                    }
+                  )}
                 >
                   <TextInput
                     withAsterisk

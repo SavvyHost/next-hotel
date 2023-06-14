@@ -87,7 +87,7 @@ export function Subscribe() {
           <Button className={`${classes.control} bg-bg_banfsgy`}>Subscribe</Button>
         </div>
       </div>
-      <Image src={image.src} className={classes.image} />
+      <Image src={image.src} className={classes.image} alt='img' />
     </div>
   );
 }
