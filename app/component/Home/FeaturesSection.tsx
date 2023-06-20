@@ -64,7 +64,7 @@ const features = [
   },
 ];
 
-export function FeaturesSection() {
+export default function FeaturesSection() {
   const { classes } = useStyles();
 
   const items = features.map((feature) => (

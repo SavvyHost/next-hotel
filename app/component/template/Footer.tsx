@@ -9,7 +9,7 @@ import Image from "next/image";
 function Footer() {
   return (
     <>
-      <footer className="bg-black">
+      <footer className="mt-10 bg-black">
         <main className="p-10">
           <ul className="text-white">
             <li className="flex justify-between">

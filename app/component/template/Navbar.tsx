@@ -194,16 +194,22 @@ export function Navbar() {
       <Header height={60} px="md" className="flex justify-between">
         <Group sx={{ height: "100%" }}>
           <Burger opened={openedBar} onClick={toggle} size="sm" />
-
+          <Link href="/"  className={classes.link}>
           <Logo />
+            </Link>
+
           <Group
             sx={{ height: "100%" }}
             spacing={0}
             className={classes.hiddenMobile}
           >
-            <Link href="#" className={classes.link}>
+          
+
+            
+            <Link href="/search"  className={classes.link}>
               Search
             </Link>
+            
             <Link href="#" className={classes.link}>
               For Business
             </Link>

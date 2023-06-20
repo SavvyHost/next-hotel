@@ -1,9 +1,9 @@
 "use client"
 import { MantineProvider } from "@mantine/core"
-import "./globals.css"
 import { Inter } from "next/font/google"
 import { Navbar } from "./component/template/Navbar"
-import Home from "./page"
+import "./globals.css"
+import Footer from "./component/template/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -24,6 +24,7 @@ export default function RootLayout({
         <body className={inter.className} >
           <Navbar />
           {children}
+          <Footer/>
         </body>
       </MantineProvider>
     </html>

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "~react-image-gallery/styles/css/image-gallery.css";
 .mantine-tou914 {
   background-color: transparent;
   padding: 15px !important;
@@ -18,7 +18,14 @@
   border-right: 0;
   border-radius: 0.5rem;
 }
-
 .mantine-1l7xo4v {
   border: 1px solid #5d22d5;
+}
+.mantine-gszoqu{
+  border-radius: 9px !important;
+  padding: 20px;
+  margin: 0;
+}
+.mantine-1cy5rcb{
+  margin: 0;
 }

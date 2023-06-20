@@ -65,7 +65,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function Subscribe() {
+export default function Subscribe() {
   const { classes } = useStyles();
   return (
     <div className={`${classes.wrapper} border-0 p-20 m-auto container `}>

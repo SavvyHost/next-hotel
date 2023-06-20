@@ -11,6 +11,7 @@ import { IconCheck, IconLocation, IconStar } from "@tabler/icons-react"
 import Button from "../atoms/Button"
 
 import { Carousel } from "@mantine/carousel"
+import Link from "next/link"
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -88,6 +89,7 @@ export function CardSearch({
       className={`${classes.card} mt-4 hover:shadow-xl  hover:transition-shadow cursor-pointer`}
     >
       <Group noWrap spacing={0}>
+        <Link href="/search/[DetailsProductID]" as="/search/123">
         <div className="grid grid-cols-12">
           <div className="col-span-3">
             <Carousel
@@ -197,6 +199,7 @@ export function CardSearch({
             </div>
           </div>
         </div>
+        </Link>
       </Group>
     </Card>
   )
