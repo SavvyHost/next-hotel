@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Stepper, Button, Group } from "@mantine/core";
 import DetailsBooking from "./DetailsBooking";
+import DetailsPayment from "./DetailsPayment";
+import Confirmation from "./Confirmation";
 
 function StepsChexkOut() {
   const [active, setActive] = useState(1);
@@ -33,10 +35,14 @@ function StepsChexkOut() {
                 </div>
               </Group>
             </div>
+            <div className="col-span-4">
+              <DetailsPayment />
+            </div>
           </div>
         </Stepper.Step>
         <Stepper.Step label="Final step" description="Booking Confirmation">
-          Step 3 content: Get full access
+          <Confirmation/>
+          
         </Stepper.Step>
         <Stepper.Completed>
           Completed, click back button to get to previous step
