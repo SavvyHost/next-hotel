@@ -5,9 +5,9 @@ import Link from "next/link";
 
 function About() {
   return (
-    <div className="p-20 contaniner ">
+    <div className="p-5 md:p-20 contaniner ">
       <div className="grid items-center grid-cols-2 ">
-        <div className="col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <h1 className="text-3xl font-bold ">About us</h1>
           <p>
             We are StayExpo and our mission is to streamline the way brands and
@@ -18,7 +18,7 @@ function About() {
             red more
           </Link>
         </div>
-        <div className="w-[90%] col-span-1">
+        <div className="w-[90%]  col-span-2 md:col-span-1">
           <Image className="w-full" src={imgAbout} alt="lazy" />
         </div>
       </div>

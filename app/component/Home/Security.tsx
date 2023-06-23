@@ -8,9 +8,9 @@ import img5 from "../../../public/assets/stripe.bdb07a0f.png";
 
 function Security() {
   return (
-    <div className="bg-[#f8f8f8] p-20 mt-10">
+    <div className="bg-[#f8f8f8] p-5 md:p-20 mt-10">
       <h1 className="text-3xl font-bold ">Security</h1>
-      <p className="w-1/2">
+      <p className="w-full md:w-1/2">
         Our partners guarantee the security of your data and payments with their
         global reputation.
       </p>

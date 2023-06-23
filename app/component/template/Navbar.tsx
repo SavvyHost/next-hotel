@@ -194,8 +194,8 @@ export function Navbar() {
       <Header height={60} px="md" className="flex justify-between">
         <Group sx={{ height: "100%" }}>
           <Burger opened={openedBar} onClick={toggle} size="sm" />
-          <Link href="/"  className={classes.link}>
-          <Logo />
+          <Link href="/"  className={`${classes.link} hidden md:block`}>
+                <Logo />
             </Link>
 
           <Group

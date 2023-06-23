@@ -101,8 +101,8 @@ export default function FeaturesSection() {
         </div>
         
         <Col span={12} md={12} className="p-4">
-          <Tabs defaultValue="gallery" orientation="vertical">
-            <Tabs.List className="w-1/4 text-xl font-bold border-r-0 text-neutral-950">
+          <Tabs defaultValue="gallery" orientation="vertical" className="flex-col  md:flex-row">
+            <Tabs.List className="w-full text-xl font-bold border-r-0 md:w-1/4 text-neutral-950">
               <Tabs.Tab value="gallery" className="border-r-0 border-black ">
                 <h5 className="flex items-center gap-2">
                   <IconPackage className="text-blue-600" />
@@ -137,7 +137,7 @@ export default function FeaturesSection() {
                 cols={2}
                 spacing={20}
                 breakpoints={[{ maxWidth: "md", cols: 1 }]}
-                className="px-20"
+                className="p-0 md:px-20"
               >
                 {items}
               </SimpleGrid>
@@ -148,7 +148,7 @@ export default function FeaturesSection() {
                 cols={2}
                 spacing={20}
                 breakpoints={[{ maxWidth: "md", cols: 1 }]}
-                className="px-20"
+                className="p-0 md:px-20"
               >
                 {items}
               </SimpleGrid>
@@ -159,7 +159,7 @@ export default function FeaturesSection() {
                 cols={2}
                 spacing={20}
                 breakpoints={[{ maxWidth: "md", cols: 1 }]}
-                className="px-20"
+                className="p-0 md:px-20"
               >
                 {items}
               </SimpleGrid>

@@ -10,7 +10,7 @@ function Footer() {
   return (
     <>
       <footer className="mt-10 bg-black">
-        <main className="p-10">
+        <main className="p-5 md:p-10">
           <ul className="text-white">
             <li className="flex justify-between">
               <a href="/" className="flex">
@@ -42,7 +42,7 @@ function Footer() {
             </li>
 
             <li className="grid grid-cols-4">
-              <div className="flex flex-col col-span-1 p-5">
+              <div className="flex flex-col col-span-4 p-2 md:p-5 md:col-span-1">
                 <a className="w-12 border-b border-b-[#8900a1] py-1">About</a>
                 <a className="text-gray-600">
                   We are a travel business that specializes in hotel
@@ -52,7 +52,7 @@ function Footer() {
                 </a>
               </div>
 
-              <div className="flex flex-col col-span-1 p-5">
+              <div className="flex flex-col col-span-4 p-2 md:p-5 md:col-span-1">
                 <a className="w-1/3 border-b border-b-[#8900a1] py-1">
                   Quick Links
                 </a>
@@ -74,7 +74,7 @@ function Footer() {
                 </a>
               </div>
 
-              <div className="flex flex-col col-span-1 p-5">
+              <div className="flex flex-col col-span-4 p-2 md:p-5 md:col-span-1">
                 <a className="w-1/3 border-b border-b-[#8900a1] py-1">
                   Contact Us
                 </a>
@@ -98,7 +98,7 @@ function Footer() {
                 </a>
               </div>
 
-              <div className="flex flex-col col-span-1 p-5">
+              <div className="flex flex-col col-span-4 p-2 md:p-5 md:col-span-1">
                 <a className="w-1/3 border-b border-b-[#8900a1] py-1">
                   Subscription
                 </a>
@@ -117,12 +117,12 @@ function Footer() {
             </li>
 
             <li className="grid items-center grid-cols-5">
-              <div className="col-span-1">
+              <div className="col-span-5 my-4 md:col-span-1">
               <Image className="w-2/3" src={img2.src} alt="img"  width="10" height="10"/>
                 
               </div>
 
-              <div className="col-span-3">
+              <div className="col-span-5 md:col-span-3">
                 <div className="text-gray-600 border border-[#555] p-4 rounded-xl">
                   StayExpo is an independent and privately owned tour operator.
                   Any names or logos of hotel properties, events or venues may

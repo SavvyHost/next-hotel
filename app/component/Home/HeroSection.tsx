@@ -19,9 +19,9 @@ function HeroSection() {
   })
 
   return (
-    <div className="container p-20 m-auto">
+    <div className="container p-0 m-auto md:p-20">
       <div className="grid grid-cols-2 px-5">
-        <div className="col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <h1 className="text-3xl font-bold">
             RateHawk is a service for booking hotels, air tickets and other
             travel services for professionals
@@ -34,7 +34,7 @@ function HeroSection() {
             sign up
           </Button>
         </div>
-        <div className="col-span-1 ">
+        <div className="col-span-2 md:col-span-1">
           <form onSubmit={
             form.onSubmit(
               (values) =>
@@ -44,7 +44,7 @@ function HeroSection() {
                 }
             )
           }>
-            <div className="w-[60%] ml-auto ">
+            <div className="w-[100%] md:w-[60%] mt-10 md:ml-auto ">
               <div className="p-3 shadow-2xl rounded-xl">
                 <SelectForm />
                 <div className="grid grid-cols-2 mt-4">

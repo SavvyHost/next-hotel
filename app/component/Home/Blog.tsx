@@ -11,10 +11,10 @@ import { BlogCard } from "../mucles/BlogCard";
 
 function Blog() {
   return (
-    <div className="container p-10 my-0 m-auto">
+    <div className="container p-10 m-auto my-0">
       <div className="col-span-1">
         <h1 className="text-3xl font-bold ">Blog</h1>
-        <p className="w-1/2">
+        <p className="w-full md:w-1/2">
           Here we share news about the travel industry and life-hacks for
           professionals. Follow us, read us and enjoy!
         </p>
@@ -27,7 +27,11 @@ function Blog() {
           slideGap="md"
           loop
           align="start"
-          slidesToScroll={5}
+          slidesToScroll={1}
+          breakpoints={[
+            { maxWidth: 'md', slideSize: '50%' },
+            { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
+          ]}
         >
           <Carousel.Slide>
             <BlogCard

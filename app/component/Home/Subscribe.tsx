@@ -68,7 +68,7 @@ const useStyles = createStyles((theme) => ({
 export default function Subscribe() {
   const { classes } = useStyles();
   return (
-    <div className={`${classes.wrapper} border-0 p-20 m-auto container `}>
+    <div className={`${classes.wrapper} border-0 p-5 md:p-20 m-auto container `}>
       <div className={classes.body}>
         <Title className={classes.title}>Wait a subscribe...</Title>
         <Text fw={500} fz="lg" mb={5}>
