@@ -5,6 +5,7 @@ import Button from "../atoms/Button"
 import DateInputComp from "../atoms/DateInput"
 import DropDown from "../atoms/DropDown"
 import SelectForm from "../atoms/SelectForm"
+import Link from "next/link"
 
 function HeroSection() {
   const form = useForm({
@@ -58,8 +59,13 @@ function HeroSection() {
                 <Button
                   variant="primary"
                   className="p-2 px-4 w-[100%] mt-5"
+                  
                 >
-                  Explore Hotels
+                 
+            <Link href="/search" >
+            Explore Hotels
+            </Link>
+                  
 
                   </Button>
               </div>

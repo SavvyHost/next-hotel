@@ -19,7 +19,7 @@ function StepsChexkOut() {
           Step 1 content: Create an account
         </Stepper.Step>
         <Stepper.Step label="Second step" description="Guest & Payment Details">
-          <div className="grid grid-cols-12">
+          <div className="grid grid-cols-12 mt-5">
             <div className="col-span-8">
               <DetailsBooking />
               <Group position="center" mt="xl">
