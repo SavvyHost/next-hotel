@@ -6,7 +6,7 @@ export default function LoacationSite() {
   return (
     <div className="mt-5">
       <div className="grid grid-cols-12">
-        <div className="col-span-8">
+        <div className="col-span-12 md:col-span-8">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2503345.0294716563!2d5.27937025!3d52.21299185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2snl!4v1686505162649!5m2!1sar!2snl"
             height="300"
@@ -222,7 +222,7 @@ export default function LoacationSite() {
             
           </div>
         </div>
-        <div className="col-span-4 px-5 mt-10">
+        <div className="col-span-12 px-5 mt-10  md:col-span-4">
           <div>
             <div className="flex gap-1">
               <IconLocationFilled className="text-sm text-bg_banfsgy" />

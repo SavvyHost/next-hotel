@@ -20,7 +20,7 @@ function StepsChexkOut() {
         </Stepper.Step>
         <Stepper.Step label="Second step" description="Guest & Payment Details">
           <div className="grid grid-cols-12 mt-5">
-            <div className="col-span-8">
+            <div className="col-span-12 md:col-span-8">
               <DetailsBooking />
               <Group position="center" mt="xl">
                 {/* <Button variant="default" onClick={prevStep}>Complete Booking</Button> */}
@@ -35,7 +35,7 @@ function StepsChexkOut() {
                 </div>
               </Group>
             </div>
-            <div className="col-span-4">
+            <div className="col-span-12  md:col-span-4">
               <DetailsPayment />
             </div>
           </div>

@@ -72,7 +72,9 @@ export function SelectLang() {
       {item.label}
     </Menu.Item>
   ))
-
+  // justify-content: start;
+  // gap: 7px;
+  // width: fit-content;
   return (
     <Menu
       onOpen={() => setOpened(true)}

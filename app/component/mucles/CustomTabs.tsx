@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 import React, { useState } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import imgCompany from '../../../public/assets/agoda_preferred_logo.png'
 const CustomTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState("tab1");
 
@@ -28,7 +28,7 @@ const CustomTabs: React.FC = () => {
   return (
     <div className="mt-3">
       <div className="flex items-center justify-between p-3 border">
-        <ul className="flex gap-10">
+        <ul className="hidden gap-10 md:flex">
           <li>
             <Link
               activeClass="active"
@@ -113,16 +113,24 @@ const CustomTabs: React.FC = () => {
 
       <div id="content">
         <div className="grid grid-cols-6 mt-4">
-          <div className="col-span-4">
+          <div className="col-span-6 md:col-span-4">
             <div className="p-4 border rounded-sm">
               <div className="border-b">
-                <div className="flex items-center gap-2">
+                <div>
+                  <div>
+                    <Image alt="img company" src={imgCompany} width='100' height='100' />
+                    
+                  </div>
+                    
+                  
+                <div className="flex items-center gap-2 mt-3">
                   <h1 className="font-bold">LIHO Hotel Tainan</h1>
                   <div className="flex gap-1">
                     <IconStar className="text-yellow-500 fill-yellow-500" />
                     <IconStar className="text-yellow-500 fill-yellow-500" />
                     <IconStar className="text-yellow-500 fill-yellow-500" />
                   </div>
+                </div>
                 </div>
                 <div className="py-2">
                   <p className="text-gray-600">
@@ -264,7 +272,7 @@ const CustomTabs: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 px-3">
+          <div className="col-span-6 px-3 md:col-span-2">
             <div className="p-4 border rounded-sm">
               <div>
                 <h1 className="font-bold"> 7.7 Very good </h1>
@@ -369,39 +377,39 @@ const CustomTabs: React.FC = () => {
             Tip: Your travel dates are a while from now. Try a deal with Free
             cancellation to stay flexible in case plans change.
           </p>
-          <div className="grid grid-cols-5">
-            <div className="col-span-1">
-              <div className="flex items-center gap-2 p-3 m-2 border rounded-lg">
+          <div className="grid grid-cols-6 md:grid-cols-5">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-center gap-2 p-0 m-2 text-center border rounded-lg md:p-3 flex-md:flex-row">
                 <IconCalendar />
                 <small>Pay later option (4)</small>
               </div>
             </div>
-            <div className="col-span-1">
-              <div className="flex items-center gap-2 p-3 m-2 border rounded-lg">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-center gap-2 p-0 m-2 text-center border rounded-lg md:p-3 flex-md:flex-row">
                 <IconCalendar />
                 <small>Pay later option (4)</small>
               </div>
             </div>
-            <div className="col-span-1">
-              <div className="flex items-center gap-2 p-3 m-2 border rounded-lg">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-center gap-2 p-0 m-2 text-center border rounded-lg md:p-3 flex-md:flex-row">
                 <IconCalendar />
                 <small>Pay later option (4)</small>
               </div>
             </div>
-            <div className="col-span-1">
-              <div className="flex items-center gap-2 p-3 m-2 border rounded-lg">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-center gap-2 p-0 m-2 text-center border rounded-lg md:p-3 flex-md:flex-row">
                 <IconCalendar />
                 <small>Pay later option (4)</small>
               </div>
             </div>
-            <div className="col-span-1">
-              <div className="flex items-center gap-2 p-3 m-2 border rounded-lg">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-center gap-2 p-0 m-2 text-center border rounded-lg md:p-3 flex-md:flex-row">
                 <IconCalendar />
                 <small>Pay later option (4)</small>
               </div>
             </div>
-            <div className="col-span-1">
-              <div className="flex items-center gap-2 p-3 m-2 border rounded-lg">
+            <div className="col-span-2 md:col-span-1">
+              <div className="flex flex-col items-center gap-2 p-0 m-2 text-center border rounded-lg md:p-3 flex-md:flex-row">
                 <IconCalendar />
                 <small>Pay later option (4)</small>
               </div>

@@ -4,12 +4,31 @@ import Button from "@/app/component/atoms/Button";
 import DateInputComp from "@/app/component/atoms/DateInput";
 import DropDown from "@/app/component/atoms/DropDown";
 import SelectForm from "@/app/component/atoms/SelectForm";
+import CustomNavigatonDetails from "@/app/component/mucles/CustomNavigatonDetails";
 import CustomTabs from "@/app/component/mucles/CustomTabs";
 import DetailsRoom from "@/app/component/mucles/DetailsRoom";
+import ImageSlider from "@/app/component/mucles/ImageSlider";
 import { Skeleton } from "@mantine/core";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
+
+const images = [
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+  { full_path: "https://pix8.agoda.net/hotelImages/604/60410/60410_15110714170037574774.jpg?ca=&ce=1&s=1024x768" },
+
+  // Add more image objects as needed
+];
+
 
 export default function Page() {
   const [isLoading] = useState(false);
@@ -18,24 +37,9 @@ export default function Page() {
 
 
   return (
-    <div className="container px-20 m-auto">
-      <div className="grid grid-cols-4">
-        <div className="col-span-1 p-3">
-          <SelectForm />
-        </div>
-        <div className="col-span-1 p-3">
-          <DateInputComp placeholder="12/2/2022" />
-        </div>
-        <div className="col-span-1 p-3">
-          <DropDown />
-        </div>
-        <div className="col-span-1 p-3">
-          <Button variant="primary" className="p-1 px-4 w-[100%] ">
-            Update Search
-          </Button>
-        </div>
-      </div>
-      <div>
+    <div className="container md:m-auto md:px-20">
+    <CustomNavigatonDetails/>
+      <div className="hidden md:block">
         <div className="grid grid-cols-5">
           <div className="col-span-2">
             {isLoading ? (
@@ -137,6 +141,10 @@ export default function Page() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="md:hidden">
+        <ImageSlider media={images}/>
+        
       </div>
       <CustomTabs />
       <DetailsRoom />
