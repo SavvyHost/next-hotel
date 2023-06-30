@@ -37,8 +37,9 @@ export default function Page() {
 
 
   return (
-    <div className="container md:m-auto md:px-20">
+    <>
     <CustomNavigatonDetails/>
+    <div className="container md:m-auto md:px-20">
       <div className="hidden md:block">
         <div className="grid grid-cols-5">
           <div className="col-span-2">
@@ -153,5 +154,6 @@ export default function Page() {
       <DetailsRoom />
       <LoacationSite />
     </div>
+    </>
   );
 }

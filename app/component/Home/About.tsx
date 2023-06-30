@@ -18,7 +18,7 @@ function About() {
             red more
           </Link>
         </div>
-        <div className="w-[90%]  col-span-2 md:col-span-1">
+        <div className="w-[60%]  col-span-2 md:col-span-1 m-auto">
           <Image className="w-full" src={imgAbout} alt="lazy" />
         </div>
       </div>

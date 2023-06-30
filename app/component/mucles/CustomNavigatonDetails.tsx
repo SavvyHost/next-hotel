@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Button, Tabs } from "@mantine/core";
 import { IconPhone } from "@tabler/icons-react";
 import Image from "next/image";
@@ -17,12 +17,15 @@ import MapIcon from "../icons/MapIcon";
 import FilterIcon from "../icons/FilterIcon";
 
 export default function CustomNavigatonDetails() {
-    const [open, setOpen] = useState(false);
-    const [openFilter, setOpenFilter] = useState(false);
-    const [openMap, setOpenMap] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [openFilter, setOpenFilter] = useState(false);
+  const [openMap, setOpenMap] = useState(false);
+  const itemGridRef = useRef(null);
+
+
   return (
-    <div>
-              <div className="hidden grid-cols-4 md:grid">
+    <div className="bg-[#f4f6f8]">
+      <div className="hidden grid-cols-4 m-auto md:grid md:p-2" >
         <div className="col-span-1 p-3">
           <SelectForm />
         </div>
@@ -33,7 +36,7 @@ export default function CustomNavigatonDetails() {
           <DropDown />
         </div>
         <div className="col-span-1 p-3">
-          <Button  className="p-1 px-4 w-[100%] bg-bg_banfsgy text-white">
+          <Button className="p-1 px-4 w-[100%] bg-bg_banfsgy text-white">
             Update Search
           </Button>
         </div>
@@ -215,7 +218,6 @@ export default function CustomNavigatonDetails() {
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2503345.0294716563!2d5.27937025!3d52.21299185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2snl!4v1686505162649!5m2!1sar!2snl"
-          
           allowFullScreen
           loading="lazy"
           className="w-full h-screen rounded-xl"

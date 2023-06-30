@@ -192,7 +192,7 @@ export function CardSearch({
                   </p>
                 </div>
 
-                <div className="text-end">
+                <div className=" text-end md:text-center">
                   {/* تعمل الخصم  */}
                   <p className="text-sm">50$</p>
                   <h1 className="text-[#5d22d5] font-bold text-lg md:text-2xl">

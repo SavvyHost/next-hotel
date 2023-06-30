@@ -17,6 +17,7 @@ function DateInputComp({ placeholder }: any) {
         mx="auto"
         maw={400}
         clearable
+        className="bg-white"
       />
     </div>
   );

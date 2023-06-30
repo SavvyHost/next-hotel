@@ -2,17 +2,14 @@
 
 import React from "react";
 import { Carousel } from "@mantine/carousel";
-import { BadgeCard } from "../mucles/Card";
-import blog1 from "../../../public/assets/blog1.png";
-import blog2 from "../../../public/assets/blog3.png";
-import blog3 from "../../../public/assets/thermprocess-Lxx1-logo.webp";
-
-import { BlogCard } from "../mucles/BlogCard";
+import { BadgeCard  } from "../mucles/Card";
+import eventImage from "../../../public/assets/event-banner1.jpg";
 
 function Blog() {
   return (
-    <div className="container p-10 m-auto my-0">
-      <div className="col-span-1">
+    <div className="container p-10 m-auto my-20">
+        <div className="col-span-1">
+        
         <h1 className="text-3xl font-bold ">Blog</h1>
         <p className="w-full md:w-1/2">
           Here we share news about the travel industry and life-hacks for
@@ -34,75 +31,60 @@ function Blog() {
           ]}
         >
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
+              
             />
           </Carousel.Slide>
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
             />
           </Carousel.Slide>
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
             />
           </Carousel.Slide>
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
             />
           </Carousel.Slide>
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
             />
           </Carousel.Slide>
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
             />
           </Carousel.Slide>
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
             />
           </Carousel.Slide>
           <Carousel.Slide>
-            <BlogCard
-              image={blog1.src}
-              avatar={blog3.src}
-              name="THERMPROCESS 2023"
-              Date="10/5/2022"
-              title="Messe Dusseldorf"
+            <BadgeCard
+            rating="rating"
+              image={eventImage.src}
+              description="StayExpo at TTG Travel Experience 2022 in Italy, Rimini"
             />
           </Carousel.Slide>
         </Carousel>

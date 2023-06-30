@@ -35,3 +35,26 @@
   padding-left: 0;
   padding-right: 0;
 }
+.mantine-ydk0kj{
+  @apply justify-start  gap-[9px] w-fit
+}
+.mantine-1svz3tp {
+  @apply w-full
+
+}
+.mantine-1nh6y3l{
+  margin-top: -2.875rem;
+}
+.shapeOne , .shapTwo {
+  top: -101px;
+  z-index: -29;
+  filter: blur(7px);
+}
+.shapeOne{
+  right: -60px;
+}
+.shapTwo{
+  left: -28px;
+  top: -18px;
+
+}

@@ -1,13 +1,15 @@
-import { Avatar, Group, Select, Text } from "@mantine/core"
-import { useForm } from "@mantine/form"
-import { forwardRef } from "react"
+import { Avatar, Group, Select, Text } from "@mantine/core";
+import { useForm } from "@mantine/form";
+import { IconBuilding } from "@tabler/icons-react";
+import { forwardRef } from "react";
 
 const data = [
   {
-    image: "https://img.icons8.com/clouds/256/000000/futurama-bender.png",
-    label: "Bender Bending Rodríguez",
-    value: "Bender Bending Rodríguez",
-    description: "Fascinated with cooking",
+    image:
+      "https://f.worldota.net/ratehawk-landing/branch/b429229/_next/static/assets/ge.962a33a0.svg",
+    label: "Egrisi Hotel",
+    value: "Egrisi Hotel",
+    description: "Batumi, Gonio, ul. Svimon Kananeli, 60",
   },
   {
     image: "https://img.icons8.com/clouds/256/000000/futurama-mom.png",
@@ -27,12 +29,12 @@ const data = [
     value: "Spongebob Squarepants",
     description: "Not just a sponge",
   },
-]
+];
 
 interface ItemProps extends React.ComponentPropsWithoutRef<"div"> {
-  image?: string
-  label: string
-  description: string
+  image?: string;
+  label: string;
+  description: string;
 }
 
 // eslint-disable-next-line react/display-name
@@ -40,18 +42,19 @@ const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
   ({ image, label, description, ...others }: ItemProps, ref) => (
     <div ref={ref} {...others}>
       <Group noWrap>
-        <Avatar src={image} />
+        <IconBuilding />
 
         <div>
           <Text size="sm">{label}</Text>
-          <Text size="xs" opacity={0.65}>
-            {description}
+          <Text size="xs" opacity={0.65} className="flex">
+            <Avatar src={image} size="xs" className="mr-1" />
+            <p className="">{description}</p>
           </Text>
         </div>
       </Group>
     </div>
   )
-)
+);
 
 function SelectForm() {
   const form = useForm({
@@ -63,7 +66,7 @@ function SelectForm() {
       email: (value: string) =>
         /^\S+@\S+$/.test(value) ? null : "Invalid email",
     },
-  })
+  });
 
   return (
     <div>
@@ -83,7 +86,7 @@ function SelectForm() {
         />
       </Group>
     </div>
-  )
+  );
 }
 
-export default SelectForm
+export default SelectForm;

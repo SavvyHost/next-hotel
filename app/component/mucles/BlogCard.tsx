@@ -54,7 +54,7 @@ export function BlogCard({
 
   return (
     <Card withBorder padding="xl" radius="md" className={classes.card}>
-      <Card.Section sx={{ backgroundImage: `url(${image})`, height: 140 }} />
+      <Card.Section sx={{ backgroundImage: `url(${image})`, height: 110 }} />
       <Avatar
         src={avatar}
         size={80}

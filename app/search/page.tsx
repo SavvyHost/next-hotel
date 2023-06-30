@@ -26,9 +26,10 @@ export default function Search() {
   const [openMap, setOpenMap] = useState(false);
 
   return (
+    <>
+      <CustomNavigatonDetails/>
     <div className="container m-auto md:p-2">
 
-      <CustomNavigatonDetails/>
 
 
       <div className="grid grid-cols-12 p-2 md:p-0">
@@ -59,28 +60,23 @@ export default function Search() {
           </div>
           <div className="mt-5">
             <h3 className="my-2 border-b-[#ccc] border-b">Your Budget</h3>
-            <div className="flex items-center justify-between mt-3">
-              <CheckboxComp label="$$$$$" />
-              <p className="text-gray-500">($0 to $80 per night)</p>
+            <div className="w-full mt-3">
+              <CheckboxComp  label="$$$$$" text='($0 to $80 per night)' />
             </div>
-            <div className="flex items-center justify-between mt-3">
-              <CheckboxComp label="$$$$$" />
-              <p className="text-gray-500">($0 to $80 per night)</p>
+            <div className="w-full mt-3">
+              <CheckboxComp label="$$$$$" text='($0 to $80 per night)' />
             </div>
-            <div className="flex items-center justify-between mt-3">
-              <CheckboxComp label="$$$$$" />
-              <p className="text-gray-500">($0 to $80 per night)</p>
+            <div className="w-full mt-3">
+              <CheckboxComp label="$$$$$" text='($0 to $80 per night)' />
             </div>
           </div>
           <div className="mt-5">
             <h3 className="my-2 border-b-[#ccc] border-b">Rate Options</h3>
-            <div className="flex justify-between">
-              <CheckboxComp className="mt-3" label=" Free Cancellation" />
-              <p className="text-gray-500">(22)</p>
+            <div className="">
+              <CheckboxComp className="mt-3" label=" Free Cancellation" text="(22)" />
             </div>
-            <div className="flex justify-between">
-              <CheckboxComp className="mt-3" label="Pay Later " />
-              <p className="text-gray-500">(31)</p>
+            <div className="">
+              <CheckboxComp className="mt-3" label="Pay Later " text="(31)" />
             </div>
           </div>
           <div className="mt-5">
@@ -126,9 +122,8 @@ export default function Search() {
           </div>
           <div className="mt-5">
             <h3 className="my-2 border-b-[#ccc] border-b">Property Type </h3>
-            <div className="flex justify-between">
-              <CheckboxComp className="mt-3" label="Hotels " />
-              <p className="text-gray-500">(9)</p>
+            <div className="">
+              <CheckboxComp className="mt-3" label="Hotels " text="(9)" />
             </div>
           </div>
           <div className="mt-5 border border-[#5d22d5] rounded-xl p-3">
@@ -198,5 +193,6 @@ export default function Search() {
       </div>
 
     </div>
+    </>
   );
 }

@@ -73,7 +73,7 @@ export function BadgeCard({ image, title, description, country, badges ,   ratin
   return (
     <Card withBorder radius="md" p="md" className={classes.card}>
       <Card.Section>
-        <Image src={image} alt={title} height={180} />
+        <Image src={image} alt={title} height={145} />
       </Card.Section>
       <Badge className={classes.rating} variant="gradient" gradient={{ from: 'yellow', to: 'red' }}>
         {rating}

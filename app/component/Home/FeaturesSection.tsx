@@ -1,26 +1,32 @@
 "use client";
 
 import {
-  createStyles,
-  Title,
-  SimpleGrid,
-  Text,
-  Button,
-  ThemeIcon,
-  Grid,
   Col,
-  rem,
+  Grid,
+  SimpleGrid,
+  Tabs,
+  Text,
+  ThemeIcon,
+  createStyles,
+  rem
 } from "@mantine/core";
 import {
-  IconReceiptOff,
-  IconFlame,
-  IconCircleDotted,
   IconFileCode,
   IconPackage,
+  IconReceiptOff
 } from "@tabler/icons-react";
-import { Tabs } from "@mantine/core";
+import Image, { StaticImageData } from "next/image";
 import img from "../../../public/assets/cloud-icon.png";
-import Image from "next/image";
+import hotel_icon from "../../../public/assets/hotels-icon.png"
+import  cloud_ico from "../../../public/assets/cloud-icon.png"
+import  loyalty_program_icon from "../../../public/assets/loyalty-program-icon.png"
+import  pricecomparison_icon from "../../../public/assets/pricecomparison-icon.png"
+import  support_icon from "../../../public/assets/support-icon.png"
+import  user_level_icon from "../../../public/assets/user-level-icon.png"
+import  richcontent_icon from "../../../public/assets/richcontent-icon.png"
+import  rich_feature_icon from "../../../public/assets/rich-features-icon.png"
+
+
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -37,31 +43,72 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const features = [
+type Feature = {
+  img: StaticImageData;
+  title: string;
+  description: string;
+};
+const features:Feature[] = [
+  
   {
-    icon: IconReceiptOff,
-    title: "Free and open source",
+    img: hotel_icon,
+    title: "Huge choice of inventory",
     description:
-      "All packages are published under MIT license, you can use Mantine in any project",
+      "Get access to the best hotel, flight and travel deals.",
   },
   {
-    icon: IconFileCode,
-    title: "TypeScript based",
+    img: cloud_ico,
+    title: "Exclusive Hotels Offers",
     description:
-      "Build type safe applications, all components and hooks export types",
+      "Take advantage of exclusive discounts and offers from top brands.",
   },
   {
-    icon: IconReceiptOff,
-    title: "Free and open source",
+    img: loyalty_program_icon,
+    title: "Great value Loyalty Program",
     description:
-      "All packages are published under MIT license, you can use Mantine in any project",
+      " Earn points and use them to pay for bookings..",
+  },
+  
+  {
+    img: pricecomparison_icon,
+    title: " Exclusive precheck",
+    description:
+      "You will get manual prechecks of all your bookings. We will manually pre-check all bookings and booking details with the hotel directly.",
+  },
+  
+
+  
+ 
+];
+
+const featuresTow:Feature[] = [
+  {
+    img: support_icon,
+    title: "Reliable Customer Support",
+    description:
+      "All your issues will be resolved by our 24/7 multi-lingual support service",
+  },
+  
+  {
+    img: user_level_icon,
+    title: "For different user levels",
+    description:
+      "You can assign user roles and limit access for safety and transparency.",
   },
   {
-    icon: IconFileCode,
-    title: "TypeScript based",
+    img: richcontent_icon,
+    title: "High-quality Back-office",
     description:
-      "Build type safe applications, all components and hooks export types",
+      "All information about orders, invoices, vouchers, and reports is available to you in real-time",
   },
+
+  {
+    img: rich_feature_icon,
+    title: "Rich functionality",
+    description:
+      "In a single system with a user-friendly interface, you can quickly book hotels and other travel-related services at great prices.",
+  },
+
 ];
 
 export default function FeaturesSection() {
@@ -81,7 +128,31 @@ export default function FeaturesSection() {
           className="bg-transparent"
         >
           {/* <feature.icon size={rem(26)} stroke={1.5} /> */}
-          <Image src={img} alt="clud" />
+          <Image src={feature?.img} alt="clud" />
+        </ThemeIcon>
+      </div>
+      <Text c="dimmed" fz="sm">
+        {feature.description}
+      </Text>
+    </div>
+  ));
+
+  const items2 = featuresTow.map((feature) => (
+    <div key={feature?.title} className="p-3 m-2 shadow-sm">
+      <div className="flex justify-between gap-2">
+        <Text fz="lg" mt="sm" fw={500}>
+          {feature.title}
+        </Text>
+        <ThemeIcon
+          size={44}
+          radius="md"
+          // variant="gradient"
+          // gradient={{ deg: 133, from: "blue", to: "cyan" }}
+          className="bg-transparent"
+        >
+          {/* <feature.icon size={rem(26)} stroke={1.5} /> */}
+          <Image src={feature.img} alt="clud" />
+         
         </ThemeIcon>
       </div>
       <Text c="dimmed" fz="sm">
@@ -101,7 +172,7 @@ export default function FeaturesSection() {
         </div>
         
         <Col span={12} md={12} className="p-4">
-          <Tabs defaultValue="gallery" orientation="vertical" className="flex-col  md:flex-row">
+          <Tabs defaultValue="gallery" orientation="vertical" className="flex-col md:flex-row">
             <Tabs.List className="w-full text-xl font-bold border-r-0 md:w-1/4 text-neutral-950">
               <Tabs.Tab value="gallery" className="border-r-0 border-black ">
                 <h5 className="flex items-center gap-2">
@@ -150,7 +221,7 @@ export default function FeaturesSection() {
                 breakpoints={[{ maxWidth: "md", cols: 1 }]}
                 className="p-0 md:px-20"
               >
-                {items}
+                {items2}
               </SimpleGrid>
             </Tabs.Panel>
             <Tabs.Panel value="settings">

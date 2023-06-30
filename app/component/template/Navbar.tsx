@@ -45,6 +45,7 @@ import { IconLock } from "@tabler/icons-react";
 import Image from "next/image";
 import { MantineLogo } from "@mantine/ds";
 import AsideBar from "../AsideBar";
+import ToggleMenue from "../Home/ToggleMenue";
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -225,7 +226,9 @@ export function Navbar() {
             <Button onClick={open} className="bg-bg_banfsgy">
               Sign in
             </Button>
-          <Burger opened={openedBar} onClick={toggle} size="sm" />
+            <ToggleMenue/>
+            
+          {/* <Burger opened={openedBar} onClick={toggle} size="sm" /> */}
 
           </Group>
           <Modal
